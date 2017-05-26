@@ -52,6 +52,7 @@ var scoreText;
 ```
 ...
 ```
+scoreText = game.add.text(290, -5, 'Score: 0', {fond: '10px Comics Sans', fill: '#ffffff'})
 scoreText = game.add.text(290, -5, 'Score: 0', {fond: '11px Verdara', fill: '#ffffff'})
 ```
 ...
