@@ -12,14 +12,19 @@
 # Επιλογή εργαλείων
 # Διαδικασία ανάπτυξης
 
+Στα πλαίσια του 1ου παραδοτέου, η μοναδική αλλαγή που πραγματοποιήθηκε στον δοθέντα κώδικα είναι η παρακάτω:
+```
+this.load.baseURL = 'https://psbiliri.github.io/pacman/';
+```
+
 Στα πλαίσια του 2ου παραδοτέου του μαθήματος, απ' όπου και ξεκίνησε ουσιαστικά η ανάπτυξη του παιχνιδιού, πραγματοποιήθηκε η αλλαγή του πρωταγωνιστή του παιχνιδιού, η προσθήκη επιπλέον αντικειμένων καθώς και η δημιουργία μιας νέας πίστας. Πιο συγκεκριμένα, ο πρωταγωνιστής Pacman αντικαταστάθηκε από τον Super Mario και οι αρχικές κουκίδες (dots) αντικαταστάθηκαν από κέρματα (coins). Επιπλέον, τη θέση της αρχικά δοθείσας πίστας πήρε μια νέα, με την ανατοποθέτηση των tiles του δοθέντος tileset στο χώρο της πίστας. Η νέα αυτή πίστα δημιουργήθηκε με τη χρήση του [Tiled](http://www.mapeditor.org/).
 
-Για τις παραπάνω αλλαγές, "ανέβηκαν" τα κατάλληλα αρχεία στο φάκελο assets του αποθετηρίου του παιχνιδιού και έγιναν οι κατάλληλες αλλαγές στον παρακάτω κώδικα:
+Για τις παραπάνω αλλαγές, "ανέβηκαν" τα κατάλληλα αρχεία στο φάκελο assets του αποθετηρίου του παιχνιδιού και "φορτώθηκαν" με τις κατάλληλες αλλαγές στον παρακάτω κώδικα:
 ```
-            this.load.image('dot', 'assets/coin.png');
-            this.load.image('tiles', 'assets/pacman-tiles.png');
-            this.load.spritesheet('pacman', 'assets/superMario.png', 32, 32);
-            this.load.tilemap('map', 'assets/superMario_pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
+this.load.image('dot', 'assets/coin.png');
+this.load.image('tiles', 'assets/pacman-tiles.png');
+this.load.spritesheet('pacman', 'assets/superMario.png', 32, 32);
+this.load.tilemap('map', 'assets/superMario_pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
 ```
 
 Ο πρωταγωνιστής και τα αντικείμενα που χρησιμοποιήθηκαν είναι:
