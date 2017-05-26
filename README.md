@@ -4,7 +4,7 @@
 
 # Εισαγωγή
 
-Το Pacman είναι ένα arcade βιντεοπαίχνιδι της Namco το οποίο κυκλοφόρησε για πρώτη φορά στην Ιαπωνία, στις 22 Μαΐου, με τίτλο "Puck-Man".  Σχεδιαστής του παιχνιδιού είναι ο Toru Iwatani. Το όνομα Puck-Man προέρχεται από την ιαπωνική λέξη 'πακού' η οποία στα ιαπωνικά συμβολίζει το θόρυβο που κάνει κανείς ανοιγοκλείνοντας το στόμα του. Ωστόσο, τον Οκτώβριο του 1980 με την κυκλοφορία του στις Ηνωμένες Πολιτείες, το όνομά του άλλαξε σε Packman. <br>
+Το Pacman είναι ένα arcade βιντεοπαίχνιδι της Namco το οποίο κυκλοφόρησε για πρώτη φορά στην Ιαπωνία, στις 22 Μαΐου, με τίτλο "Puck-Man".  Σχεδιαστής του παιχνιδιού είναι ο Toru Iwatani. Το όνομα Puck-Man προέρχεται από την ιαπωνική λέξη 'πακού' η οποία στα ιαπωνικά συμβολίζει το θόρυβο που κάνει κανείς ανοιγοκλείνοντας το στόμα του. Ωστόσο, τον Οκτώβριο του 1980, με την κυκλοφορία του στις Ηνωμένες Πολιτείες, το όνομά του άλλαξε σε Packman. <br>
 Πηγή: ["Pac-man", Wikipedia](https://en.wikipedia.org/wiki/Pac-Man)
 
 Καθώς το Pacman αποτελεί στις μέρες μας ένα κλασικό βιντεοπαιχνίδι, στα πλαίσια της εργασίας επιχειρήθηκε η ανανέωσή του με την προσθήκη σ'αυτό των χαρακτήρων ενός άλλου, αγαπημένου διαδρονικά, παιχνιδιού, του βιντεοπαιχνιδιού Super Mario.
@@ -26,6 +26,10 @@ this.load.image('tiles', 'assets/pacman-tiles.png');
 this.load.spritesheet('pacman', 'assets/superMario.png', 32, 32);
 this.load.tilemap('map', 'assets/superMario_pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
 ```
+...
+```
+this.map.addTilesetImage('pacman-tiles', 'tiles');
+```
 
 Ο πρωταγωνιστής και τα αντικείμενα που χρησιμοποιήθηκαν είναι:
 <p align="center">
@@ -37,6 +41,21 @@ this.load.tilemap('map', 'assets/superMario_pacman-map.json', null, Phaser.Tilem
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/17690864/26460038/1ba668b6-4181-11e7-91b8-d075535e02fe.png">
 </p>
+
+Στη συνέχεια, στα πλαίσια του 3ου παραδοτέου, το παιχνίδι προεκτάθηκε, αρχικά, με την προσθήκη score. Για την προσθήκη του score, προστέθηκε ο παρακάτω κώδικας:
+```
+var score = 0;
+var scoreText;
+```
+...
+```
+scoreText = game.add.text(290, -5, 'Score: 0', {fond: '11px Verdara', fill: '#ffffff'})
+```
+...
+```
+score += 5;
+scoreText.text = 'Score' + score;
+```
 
 # Διάγραμμα λειτουργίας συστήματος
 # Ενδεικτικές οθόνες
