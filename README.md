@@ -22,18 +22,6 @@ this.load.baseURL = 'https://psbiliri.github.io/pacman/';
 
 Στα πλαίσια του 2ου παραδοτέου του μαθήματος, απ' όπου και ξεκίνησε ουσιαστικά η ανάπτυξη του παιχνιδιού, πραγματοποιήθηκε η αλλαγή του πρωταγωνιστή του παιχνιδιού, η προσθήκη επιπλέον αντικειμένων καθώς και η δημιουργία μιας νέας πίστας. Πιο συγκεκριμένα, ο πρωταγωνιστής Pacman αντικαταστάθηκε από τον Super Mario και οι αρχικές κουκίδες (dots) αντικαταστάθηκαν από κέρματα (coins). Επιπλέον, τη θέση της αρχικά δοθείσας πίστας πήρε μια νέα, με την ανατοποθέτηση των tiles του δοθέντος tileset στο χώρο της πίστας. Η νέα αυτή πίστα δημιουργήθηκε με τη χρήση του Tiled.
 
-Για τις παραπάνω αλλαγές, "ανέβηκαν" τα κατάλληλα αρχεία στο φάκελο [assets](https://github.com/psbiliri/pacman/tree/master/assets) του αποθετηρίου του παιχνιδιού και "φορτώθηκαν" με τις κατάλληλες αλλαγές στον παρακάτω κώδικα:
-```
-this.load.image('dot', 'assets/coin.png');
-this.load.image('tiles', 'assets/pacman-tiles.png');
-this.load.spritesheet('pacman', 'assets/superMario.png', 32, 32);
-this.load.tilemap('map', 'assets/superMario_pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
-```
-...
-```
-this.map.addTilesetImage('pacman-tiles', 'tiles');
-```
-
 Ο πρωταγωνιστής και τα αντικείμενα που χρησιμοποιήθηκαν είναι:
 <p align="center">
   <img src="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Paper-Mario-icon.png">
@@ -45,22 +33,18 @@ this.map.addTilesetImage('pacman-tiles', 'tiles');
   <img src="https://cloud.githubusercontent.com/assets/17690864/26460038/1ba668b6-4181-11e7-91b8-d075535e02fe.png">
 </p>
 
-Στη συνέχεια, στα πλαίσια του 3ου παραδοτέου, το παιχνίδι προεκτάθηκε, αρχικά, με την προσθήκη score. Για την προσθήκη του score, προστέθηκε ο παρακάτω κώδικας:
-```
-var score = 0;
-var scoreText;
-```
-...
-```
-scoreText = game.add.text(290, -5, 'Score: 0', {fond: '10px Comics Sans', fill: '#ffffff'})
-scoreText = game.add.text(290, -5, 'Score: 0', {fond: '11px Verdara', fill: '#ffffff'})
-```
-...
-```
-score += 5;
-scoreText.text = 'Score' + score;
-```
+Στη συνέχεια, στα πλαίσια του 3ου παραδοτέου, το παιχνίδι προεκτάθηκε, με τη προσθήκη score, bonus, ζωών και ήχων. Πιο συγκεκριμένα, στο κάτω μέρος της οθόνης που βλέπει ο χρήστης, προστέθηκε το score που συγκεντρώνει ο παίκτης μαζεύοντας τα κέρματα της πίστας, 3 καπέλα του Super Mario, που αντιπροσωπεύουν τις 3 ζωές που έχει ο παίκτης, αλλά και το Bonus Score το οποίο συγκεντρώνει μαζεύοντας τα μανιτάρια που είναι διάσπαρτα στην πίστα. Επίσης, προστέθηκαν ήχοι, ένας για όλη τη διάρκεια που ο παίκτης βρίσκεται στο παιχνίδι και ένας για τις φορές που καταφέρνει να μαζέψει οποιοδήποτε αντικείμενο. 
 
-# Διάγραμμα λειτουργίας συστήματος
+Έτσι, οι ζωές και τα bonus μανιτάρια που προστέθηκαν είναι τα παρακάτω:
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/17690864/26557368/9ccba386-44a9-11e7-94ec-2c2319be43b5.png">
+  <img src="https://cloud.githubusercontent.com/assets/17690864/26557415/e81356cc-44a9-11e7-82d3-00bb34567dc7.png">
+</p>
+
+Επίσης, εκτός όσων απαιτούσε το παραδοτέο αυτό, έγινε αντικατάσταση του αρχικού μαύρου background της HTML σελίδας του παιχνιδιού με την παρακάτω εικόνα:
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/17690864/26557670/cd5d4174-44ab-11e7-9f52-c019d98c13ec.jpg">
+</p>
+
 # Ενδεικτικές οθόνες
 # Συμπεράσματα
