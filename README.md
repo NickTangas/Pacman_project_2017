@@ -2,10 +2,10 @@
 
 Η παρούσα αναφορά δημιουργήθηκε από τη φοιτήτρια Σμπιλίρη Παναγιώτα, με Α.Μ. Π2013130, στα πλαίσια του μαθήματος, 6ου εξαμήνου, "Τεχνολογία Λογισμικού". Σκοπός είναι η περιγραφή της εξαμηνιαίας εργασίας του μαθήματος, με αντικείμενο την επέκταση του παιχνιδιού Pacman -ένα HTML5 video game–. 
 
-Για την εύρεση της εργασίας μπορείτε χρήσιμα link είναι τα παρακάτω: </br>
-[Προσωπικό αποθετήριό](https://github.com/psbiliri/pacman) </br>
-[Παιχνίδι](https://psbiliri.github.io/pacman/) </br>
-[Github Page παιχνιδιού](https://psbiliri.github.io/Pacman_project_2017/) </br>
+Για την εύρεση της εργασίας μπορείτε χρήσιμα link είναι τα παρακάτω:
+* [Προσωπικό αποθετήριό](https://github.com/psbiliri/pacman)
+* [Παιχνίδι](https://psbiliri.github.io/pacman/)
+* [Github Page παιχνιδιού](https://psbiliri.github.io/Pacman_project_2017/)
 
 # Εισαγωγή
 
